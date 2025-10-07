@@ -51,6 +51,17 @@
   flex-shrink: 0;
 }
 
+.stat-item--logo {
+  gap: 20px;
+}
+
+.stat-logo {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
 .stat-content h4 {
   font-size: 1.5rem;
   color: #2c5530;

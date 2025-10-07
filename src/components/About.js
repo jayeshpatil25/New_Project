@@ -33,6 +33,20 @@ const About = () => {
           </div>
 
           <div className="about-stats">
+            <div className="stat-item stat-item--logo">
+              <img
+                src="/images/logo-stats.jpg" /* replace with 200x80 image in public/images */
+                alt="Zencoir Logo"
+                width="200"
+                height="80"
+                className="stat-logo"
+                loading="lazy"
+              />
+              <div className="stat-content">
+                <h4>Our Promise</h4>
+                <p>Reliable partner for sustainable growth</p>
+              </div>
+            </div>
             <div className="stat-item">
               <FaAward className="stat-icon" />
               <div className="stat-content">

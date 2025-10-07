@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import "./Contact.css";
 
@@ -11,6 +12,8 @@ const Contact = () => {
     product: "",
     message: "",
   });
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState({ type: null, message: "" });
 
   const handleChange = (e) => {
     setFormData({
@@ -19,19 +22,70 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      product: "",
-      message: "",
-    });
+    if (isSending) return;
+    setIsSending(true);
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    const toEmail = process.env.REACT_APP_EMAILJS_TO_EMAIL || "info@zencoir.in";
+
+    if (!serviceId || !templateId || !publicKey) {
+      alert(
+        "Email service is not configured. Please set EmailJS env variables."
+      );
+      return;
+    }
+
+    setStatus({ type: null, message: "" });
+
+    // Using detailed subject, no formatted date needed
+
+    const subject = `New Quote Received - ${formData.name || "Unknown"} - ${
+      formData.email || "no-email"
+    } - ${formData.company || "no-company"} - ${
+      formData.phone || "no-phone"
+    } - ${formData.product || "no-product"}`;
+
+    const templateParams = {
+      subject,
+      to_email: toEmail,
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      product: formData.product,
+      message: formData.message,
+    };
+
+    try {
+      // Ensure the email is sent to your inbox via the template's to_email
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setStatus({
+        type: "success",
+        message:
+          "Thank you! Your message has been sent. We'll get back to you soon.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        product: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error("Email send failed", err);
+      setStatus({
+        type: "error",
+        message:
+          "Sorry, something went wrong while sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -151,12 +205,8 @@ const Contact = () => {
                   onChange={handleChange}
                 >
                   <option value="">Select a product</option>
-                  <option value="coir-fiber">Coir Fiber</option>
                   <option value="coir-pith">Coir Pith</option>
-                  <option value="coir-mats">Coir Mats</option>
-                  <option value="coir-rope">Coir Rope</option>
-                  <option value="coir-bricks">Coir Bricks</option>
-                  <option value="coir-pots">Coir Pots</option>
+                  <option value="vermicompost">Vermicompost</option>
                   <option value="custom">Custom Products</option>
                 </select>
               </div>
@@ -174,9 +224,22 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn">
-                Send Message
+              <button type="submit" className="btn" disabled={isSending}>
+                {isSending ? "Sending..." : "Send Message"}
               </button>
+
+              {status.type && (
+                <div
+                  className={`form-status ${
+                    status.type === "success"
+                      ? "form-status--success"
+                      : "form-status--error"
+                  }`}
+                  role="status"
+                >
+                  {status.message}
+                </div>
+              )}
             </form>
           </div>
         </div>

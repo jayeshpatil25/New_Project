@@ -1,28 +1,16 @@
 import React from "react";
-import { FaLeaf, FaRecycle, FaSeedling, FaIndustry } from "react-icons/fa";
+import { FaSeedling } from "react-icons/fa";
 import "./Products.css";
 
 const Products = () => {
   const products = [
     {
       id: 1,
-      name: "Coir Fiber",
-      description:
-        "High-quality natural coir fiber for various industrial applications including rope making, mattresses, and upholstery.",
-      icon: FaLeaf,
-      features: [
-        "Natural & Biodegradable",
-        "High Tensile Strength",
-        "Moisture Resistant",
-        "Eco-Friendly",
-      ],
-    },
-    {
-      id: 2,
       name: "Coir Pith",
       description:
         "Premium coir pith/peat for horticulture, gardening, and agricultural applications.",
       icon: FaSeedling,
+      image: "/images/coir-pith.jpg", // replace with 800x600 image in public/images
       features: [
         "Excellent Water Retention",
         "Natural pH Balance",
@@ -31,54 +19,16 @@ const Products = () => {
       ],
     },
     {
-      id: 3,
-      name: "Coir Mats",
+      id: 2,
+      name: "Vermicompost",
       description:
-        "Durable coir mats and rugs perfect for home decor, commercial spaces, and erosion control.",
-      icon: FaRecycle,
-      features: [
-        "Durable & Long-lasting",
-        "Natural Texture",
-        "Erosion Control",
-        "Versatile Design",
-      ],
-    },
-    {
-      id: 4,
-      name: "Coir Rope",
-      description:
-        "Strong and reliable coir rope for marine, agricultural, and industrial applications.",
-      icon: FaIndustry,
-      features: [
-        "High Strength",
-        "Salt Water Resistant",
-        "Natural Material",
-        "Multiple Uses",
-      ],
-    },
-    {
-      id: 5,
-      name: "Coir Bricks",
-      description:
-        "Compressed coir bricks for gardening, hydroponics, and soil conditioning applications.",
+        "Nutrient-rich organic vermicompost ideal for soil conditioning and plant growth.",
       icon: FaSeedling,
+      image: "/images/vermicompost.jpg", // replace with 800x600 image in public/images
       features: [
-        "Easy to Use",
-        "Compact Storage",
-        "Rich in Nutrients",
-        "Organic",
-      ],
-    },
-    {
-      id: 6,
-      name: "Coir Pots",
-      description:
-        "Biodegradable coir pots for nursery and transplanting applications.",
-      icon: FaLeaf,
-      features: [
-        "100% Biodegradable",
-        "Root Friendly",
-        "Easy Transplanting",
+        "Improves Soil Structure",
+        "Boosts Plant Growth",
+        "100% Organic",
         "Sustainable",
       ],
     },
@@ -96,9 +46,22 @@ const Products = () => {
         <div className="products-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <div className="product-icon">
-                <product.icon />
-              </div>
+              {product.image ? (
+                <div className="product-image-wrap">
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt={product.name}
+                    width="400"
+                    height="280"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="product-icon">
+                  <product.icon />
+                </div>
+              )}
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <div className="product-features">

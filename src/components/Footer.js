@@ -1,14 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -25,20 +17,7 @@ const Footer = () => {
               Exporter of premium coir products with commitment to quality in
               serving global markets with sustainable, eco-friendly solutions.
             </p>
-            <div className="social-links">
-              <a href="#" className="social-link">
-                <FaFacebook />
-              </a>
-              <a href="#" className="social-link">
-                <FaTwitter />
-              </a>
-              <a href="#" className="social-link">
-                <FaLinkedin />
-              </a>
-              <a href="#" className="social-link">
-                <FaInstagram />
-              </a>
-            </div>
+            {/* Social links removed as requested */}
           </div>
 
           <div className="footer-section">
@@ -75,12 +54,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Our Products</h4>
             <ul className="footer-links">
-              <li>Coir Fiber</li>
               <li>Coir Pith</li>
-              <li>Coir Mats</li>
-              <li>Coir Rope</li>
-              <li>Coir Bricks</li>
-              <li>Coir Pots</li>
+              <li>Vermicompost</li>
             </ul>
           </div>
 

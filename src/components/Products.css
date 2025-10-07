@@ -30,6 +30,23 @@
   margin-bottom: 20px;
 }
 
+.product-image-wrap {
+  width: 400px; /* standard width */
+  height: 280px; /* standard height to target 800x560 or 800x600 */
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e9ecef;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .product-card h3 {
   font-size: 1.5rem;
   color: #2c5530;
