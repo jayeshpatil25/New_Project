@@ -14,7 +14,7 @@ const Products = () => {
       id: '01',
       description: 'Premium coir pith/peat for horticulture, gardening, and agricultural applications.',
       features: ['Excellent Water Retention', 'Natural pH Balance', 'Disease Resistant', 'Sustainable'],
-      image: "images/coir-pith.jpg", 
+      image: process.env.PUBLIC_URL + "images/coir-pith.jpg", 
       icon: FaLeaf
     },
     {
@@ -22,7 +22,7 @@ const Products = () => {
       id: '02',
       description: 'Nutrient-rich organic vermicompost ideal for soil conditioning and plant growth.',
       features: ['Improves Soil Structure', 'Boosts Plant Growth', '100% Organic', 'Sustainable'],
-      image: "images/vermicompost.jpg",
+      image: process.env.PUBLIC_URL + "images/vermicompost.jpg",
       icon: FaSeedling
     }
   ];
