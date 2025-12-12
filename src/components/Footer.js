@@ -1,91 +1,42 @@
-import React from "react";
 import { Link } from "react-scroll";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import "./Footer.css";
+import React, { useState, useEffect } from 'react';
+import { 
+  FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope, 
+  FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling, 
+  FaCertificate, FaBoxes, FaHeadset, FaClock, FaChevronRight, FaArrowRight 
+} from 'react-icons/fa';
 
+// --- Footer Component ---
 const Footer = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <div className="footer-logo">
-              <h3>Zencoir</h3>
-              <p>Export Excellence</p>
-            </div>
-            <p className="footer-description">
-              Exporter of premium coir products with commitment to quality in
-              serving global markets with sustainable, eco-friendly solutions.
-            </p>
-            {/* Social links removed as requested */}
+    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-12 border-b border-slate-800 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-1">ZENCOIR</h3>
+            <p className="text-xs text-emerald-500 uppercase tracking-[0.3em]">Export Excellence</p>
           </div>
-
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul className="footer-links">
-              <li>
-                <Link to="home" smooth={true} duration={500}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="about" smooth={true} duration={500}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="products" smooth={true} duration={500}>
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="services" smooth={true} duration={500}>
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="contact" smooth={true} duration={500}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Our Products</h4>
-            <ul className="footer-links">
-              <li>Coir Pith</li>
-              <li>Vermicompost</li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Contact Info</h4>
-            <div className="contact-info">
-              <div className="contact-item">
-                <FaPhone />
-                <span>+91 86258 56608</span>
-              </div>
-              <div className="contact-item">
-                <FaEnvelope />
-                <span>info@zencoir.in</span>
-              </div>
-              <div className="contact-item">
-                <FaMapMarkerAlt />
-                <span>Aundh, Pune, India</span>
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-8">
+             {['home', 'about', 'products', 'services', 'contact'].map((item) => (
+               <button key={item} onClick={() => scrollToSection(item)} className="text-sm hover:text-white transition-colors capitalize">
+                 {item}
+               </button>
+             ))}
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p>&copy; 2025 Zencoir. All rights reserved.</p>
-            <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-            </div>
+        <div className="grid md:grid-cols-2 gap-8 pt-12 text-sm">
+          <div className="space-y-2">
+             <p>&copy; 2025 Zencoir. All rights reserved.</p>
+             <p className="text-slate-500">Premium Coir Exporters • Pune, India</p>
+          </div>
+          <div className="flex md:justify-end gap-6">
+            <a href="#" className="hover:text-emerald-500 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-emerald-500 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

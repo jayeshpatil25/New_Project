@@ -8,9 +8,9 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="min-h-screen bg-white font-sans selection:bg-emerald-500 selection:text-white">
       <Header />
       <Hero />
       <About />
@@ -20,6 +20,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

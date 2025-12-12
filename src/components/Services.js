@@ -1,142 +1,80 @@
-import React from "react";
-import {
-  FaShippingFast,
-  FaCertificate,
-  FaHandshake,
-  FaGlobe,
-  FaBoxes,
-  FaHeadset,
-} from "react-icons/fa";
-import "./Services.css";
+import React, { useState, useEffect } from 'react';
+import { 
+  FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope, 
+  FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling, 
+  FaCertificate, FaBoxes, FaHeadset, FaClock, FaChevronRight, FaArrowRight 
+} from 'react-icons/fa';
 
+// --- Services Component ---
 const Services = () => {
   const services = [
     {
-      id: 1,
-      title: "Global Export Solutions",
-      description:
-        "Comprehensive export services to worldwide markets with efficient logistics and documentation support.",
-      icon: FaGlobe,
-      details: [
-        "International Shipping",
-        "Customs Clearance",
-        "Documentation Support",
-        "Multi-modal Transport",
-      ],
+      title: 'Global Export Solutions',
+      details: 'International Shipping, Customs Clearance'
     },
     {
-      id: 2,
-      title: "Quality Assurance",
-      description:
-        "Rigorous quality control processes ensuring every product meets international standards and specifications.",
-      icon: FaCertificate,
-      details: [
-        "Quality Testing",
-        "Certification Support",
-        "Compliance Management",
-        "Product Verification",
-      ],
+      title: 'Quality Assurance',
+      details: 'Quality Testing, Certification Support'
     },
     {
-      id: 3,
-      title: "Custom Packaging",
-      description:
-        "Tailored packaging solutions designed to protect your products during transit and meet market requirements.",
-      icon: FaBoxes,
-      details: [
-        "Custom Design",
-        "Protective Packaging",
-        "Branding Options",
-        "Size Optimization",
-      ],
+      title: 'Custom Packaging',
+      details: 'Custom Design, Branding Options'
     },
     {
-      id: 4,
-      title: "Fast & Reliable Delivery",
-      description:
-        "Efficient shipping solutions with real-time tracking and guaranteed delivery timelines.",
-      icon: FaShippingFast,
-      details: [
-        "Express Shipping",
-        "Real-time Tracking",
-        "Delivery Guarantee",
-        "Multiple Options",
-      ],
+      title: 'Fast & Reliable Delivery',
+      details: 'Real-time Tracking, Delivery Guarantee'
     },
     {
-      id: 5,
-      title: "Business Partnership",
-      description:
-        "Long-term business relationships with personalized service and dedicated account management.",
-      icon: FaHandshake,
-      details: [
-        "Dedicated Support",
-        "Regular Updates",
-        "Flexible Terms",
-        "Partnership Programs",
-      ],
+      title: 'Business Partnership',
+      details: 'Dedicated Support, Flexible Terms'
     },
     {
-      id: 6,
-      title: "24/7 Customer Support",
-      description:
-        "Round-the-clock customer service to address your queries and provide assistance whenever needed.",
-      icon: FaHeadset,
-      details: [
-        "24/7 Availability",
-        "Multi-language Support",
-        "Quick Response",
-        "Expert Guidance",
-      ],
-    },
+      title: '24/7 Customer Support',
+      details: 'Multi-language Support, Expert Guidance'
+    }
   ];
 
   return (
-    <section id="services" className="section services-section">
-      <div className="container">
-        <h2 className="section-title">Our Services</h2>
-        <p className="section-subtitle">
-          Comprehensive export solutions designed to make your international
-          trade seamless, efficient, and profitable.
-        </p>
-
-        <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-icon">
-                <service.icon />
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <ul className="service-details">
-                {service.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
+    <section id="services" className="py-24 bg-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-4 space-y-8">
+            <h2 className="text-4xl font-bold text-slate-900">Our Services</h2>
+            <p className="text-slate-600 leading-relaxed">
+              Comprehensive export solutions designed to make your international trade seamless, efficient, and profitable.
+            </p>
+            <div className="hidden lg:block p-8 border border-slate-200 bg-white shadow-sm">
+              <h4 className="text-slate-900 font-bold mb-4">Why Choose Us?</h4>
+              <ul className="space-y-4">
+                <li className="flex justify-between text-slate-600 border-b border-slate-100 pb-2">
+                  <span>Commitment</span>
+                  <span className="text-emerald-600 font-semibold">100%</span>
+                </li>
+                <li className="flex justify-between text-slate-600 border-b border-slate-100 pb-2">
+                  <span>Countries</span>
+                  <span className="text-emerald-600 font-semibold">50+</span>
+                </li>
+                <li className="flex justify-between text-slate-600">
+                  <span>Support</span>
+                  <span className="text-emerald-600 font-semibold">24/7</span>
+                </li>
               </ul>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="services-highlight">
-          <div className="highlight-content">
-            <h3>Why Choose Zencoir?</h3>
-            <div className="highlight-features">
-              <div className="highlight-feature">
-                <span className="feature-number">100%</span>
-                <span className="feature-text">Commitment to Quality</span>
-              </div>
-              <div className="highlight-feature">
-                <span className="feature-number">50+</span>
-                <span className="feature-text">Countries Served</span>
-              </div>
-              <div className="highlight-feature">
-                <span className="feature-number">100+</span>
-                <span className="feature-text">Happy Clients</span>
-              </div>
-              <div className="highlight-feature">
-                <span className="feature-number">24/7</span>
-                <span className="feature-text">Support Available</span>
-              </div>
+          <div className="lg:col-span-8">
+            <div className="grid sm:grid-cols-2 gap-x-12 gap-y-0">
+              {services.map((service, idx) => (
+                <div key={idx} className="group py-8 border-b border-slate-200 hover:border-emerald-500/50 transition-colors">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-lg font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">{service.title}</h3>
+                    <FaCertificate className="text-slate-400 group-hover:text-emerald-500 transition-colors text-sm" />
+                  </div>
+                  <p className="text-sm text-slate-500 group-hover:text-slate-600 transition-colors">
+                    {service.details}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -144,5 +82,6 @@ const Services = () => {
     </section>
   );
 };
+
 
 export default Services;
