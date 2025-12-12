@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/zencoir/static/css/main.1f3aa865.css",
-    "main.js": "/zencoir/static/js/main.b27c9e97.js",
+    "main.js": "/zencoir/static/js/main.e4985d35.js",
     "index.html": "/zencoir/index.html",
     "main.1f3aa865.css.map": "/zencoir/static/css/main.1f3aa865.css.map",
-    "main.b27c9e97.js.map": "/zencoir/static/js/main.b27c9e97.js.map"
+    "main.e4985d35.js.map": "/zencoir/static/js/main.e4985d35.js.map"
   },
   "entrypoints": [
     "static/css/main.1f3aa865.css",
-    "static/js/main.b27c9e97.js"
+    "static/js/main.e4985d35.js"
   ]
 }
