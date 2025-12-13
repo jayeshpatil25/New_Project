@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="lg:col-span-8 space-y-10">
             <div className="inline-flex items-center space-x-3 border-b border-emerald-500/30 pb-2">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-              <span className="text-emerald-600 text-sm font-mono tracking-widest uppercase">Sustainable Export Solutions</span>
+              <span className="text-emerald-600 text-md font-mono tracking-widest uppercase">Sustainable Export Solutions</span>
             </div>
             
             <h1 className="text-5xl sm:text-7xl font-bold text-slate-900 leading-tight tracking-tight">
@@ -50,18 +50,18 @@ const Hero = () => {
 
           <div className="lg:col-span-4 flex flex-col justify-end space-y-8 lg:border-l lg:border-slate-200 lg:pl-12 lg:py-12">
              <div className="space-y-2">
-                <h3 className="text-4xl font-bold text-slate-900">50+</h3>
-                <p className="text-sm text-slate-500 uppercase tracking-widest">Global Markets</p>
+                <h3 className="text-5xl font-bold text-slate-900">50+</h3>
+                <p className="text-md text-slate-500 uppercase tracking-widest">Global Markets</p>
              </div>
              <div className="w-12 h-px bg-slate-200"></div>
              <div className="space-y-2">
-                <h3 className="text-4xl font-bold text-slate-900">100%</h3>
-                <p className="text-sm text-slate-500 uppercase tracking-widest">Organic Sourcing</p>
+                <h3 className="text-5xl font-bold text-slate-900">100%</h3>
+                <p className="text-md text-slate-500 uppercase tracking-widest">Organic Sourcing</p>
              </div>
              <div className="w-12 h-px bg-slate-200"></div>
              <div className="space-y-2">
-                <h3 className="text-4xl font-bold text-slate-900">24/7</h3>
-                <p className="text-sm text-slate-500 uppercase tracking-widest">Logistics Support</p>
+                <h3 className="text-5xl font-bold text-slate-900">24/7</h3>
+                <p className="text-md text-slate-500 uppercase tracking-widest">Logistics Support</p>
              </div>
           </div>
         </div>

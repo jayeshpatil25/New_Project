@@ -1,0 +1,9 @@
+{
+  "name": "Zencoir",
+  "short_name": "Zencoir",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c5530",
+  "icons": []
+}

@@ -1,10 +1,12 @@
 import { Link } from "react-scroll";
 import React, { useState, useEffect } from 'react';
-import { 
-  FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope, 
-  FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling, 
-  FaCertificate, FaBoxes, FaHeadset, FaClock, FaChevronRight, FaArrowRight 
+import {
+  FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope,
+  FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling,
+  FaCertificate, FaBoxes, FaHeadset, FaClock, FaChevronRight, FaArrowRight
 } from 'react-icons/fa';
+
+import logo from "../assets/logo.jpg";
 
 // --- Header Component ---
 const Header = () => {
@@ -29,10 +31,15 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center space-x-3">
-            <FaLeaf className="text-emerald-600 text-2xl" />
+
+            <img
+              src={logo}
+              alt="Zencoir Logo"
+              className="h-20 w-20 object-contain"
+            />
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold text-slate-900 tracking-wide">ZENCOIR</h2>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-emerald-600">Global Exports</span>
+              <span className="text-[12px] uppercase tracking-[0.2em] text-emerald-600">Global Exports</span>
             </div>
           </div>
 
@@ -41,7 +48,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-sm font-medium text-slate-600 hover:text-emerald-700 hover:underline decoration-emerald-500 decoration-2 underline-offset-8 transition-all capitalize"
+                className="text-md font-medium text-slate-600 hover:text-emerald-700 hover:underline decoration-emerald-500 decoration-2 underline-offset-8 transition-all capitalize"
               >
                 {item}
               </button>

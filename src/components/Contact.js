@@ -36,81 +36,75 @@ const Contact = () => {
 
   const inputStyles = "w-full bg-transparent border-b border-slate-300 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors rounded-none";
 
-  return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div>
-            <h2 className="text-5xl font-bold text-slate-900 mb-8">Let's Connect</h2>
-            <p className="text-xl text-slate-600 mb-12 font-light">
-              Ready to start your coir benefit journey? Get in touch for personalized quotes.
-            </p>
+   return (
+    <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent opacity-50"></div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Centered Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Let's Connect</h2>
+          <p className="text-lg text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">
+            Ready to start your coir benefit journey? Fill out the form below and we will get back to you with a personalized quote.
+          </p>
+        </div>
 
-            <div className="space-y-8">
-              {[
-                { icon: FaPhone, title: 'Call Us', value: '+91 86258 56608' },
-                { icon: FaEnvelope, title: 'Email', value: 'info@zencoir.in' },
-                { icon: FaMapMarkerAlt, title: 'Visit', value: 'Yashashree Society, Marutrao Gaikwadnagar, Aundh\nPune, Maharashtra 411067, India' },
-                { icon: FaClock, title: 'Hours', value: 'Mon - Fri: 9:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM' }
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-6 group">
-                  <div className="text-emerald-600 text-xl mt-1 group-hover:scale-110 transition-transform">
-                    <item.icon />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-700 uppercase tracking-wider mb-1">{item.title}</h4>
-                    <p className="text-slate-600 text-base whitespace-pre-line group-hover:text-slate-900 transition-colors">{item.value}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-slate-100 p-8 lg:p-12 border border-slate-200">
+        {/* The Form (Centered "Paper" Design) */}
+        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 overflow-hidden border border-slate-100">
+          <div className="p-8 lg:p-12">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <label className="block text-xs uppercase text-emerald-600 mb-1">Full Name</label>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} required className={inputStyles} placeholder="John Doe" />
                 </div>
-                <div>
-                  <label className="block text-xs uppercase text-emerald-600 mb-1">Email Address</label>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Email Address</label>
                   <input type="email" name="email" value={formData.email} onChange={handleChange} required className={inputStyles} placeholder="john@company.com" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <label className="block text-xs uppercase text-emerald-600 mb-1">Company</label>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Company</label>
                   <input type="text" name="company" value={formData.company} onChange={handleChange} className={inputStyles} placeholder="Company Name" />
                 </div>
-                <div>
-                  <label className="block text-xs uppercase text-emerald-600 mb-1">Phone</label>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone</label>
                   <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className={inputStyles} placeholder="+1 (555) 000-0000" />
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs uppercase text-emerald-600 mb-1">Product Interest</label>
-                <select name="product" value={formData.product} onChange={handleChange} className={`${inputStyles} appearance-none cursor-pointer bg-slate-50`}>
-                  <option value="" className="text-slate-500">Select a product</option>
-                  <option value="coir-pith" className="text-slate-900">Coir Pith</option>
-                  <option value="vermicompost" className="text-slate-900">Vermicompost</option>
-                  <option value="custom" className="text-slate-900">Custom Products</option>
-                </select>
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Product Interest</label>
+                <div className="relative">
+                  <select name="product" value={formData.product} onChange={handleChange} className={`${inputStyles} appearance-none cursor-pointer`}>
+                    <option value="" className="text-slate-400">Select a product</option>
+                    <option value="coir-pith" className="text-slate-900">Coir Pith</option>
+                    <option value="vermicompost" className="text-slate-900">Vermicompost</option>
+                    <option value="custom" className="text-slate-900">Custom Products</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <label className="block text-xs uppercase text-emerald-600 mb-1">Message</label>
-                <textarea name="message" value={formData.message} onChange={handleChange} required rows="3" className={`${inputStyles} resize-none bg-slate-50`} placeholder="Your requirements..."></textarea>
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Message</label>
+                <textarea name="message" value={formData.message} onChange={handleChange} required rows="4" className={`${inputStyles} resize-none`} placeholder="Tell us about your requirements..."></textarea>
               </div>
 
-              <button type="submit" disabled={isSending} className="w-full py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold tracking-widest uppercase text-sm transition-all disabled:opacity-50 mt-4 shadow-md shadow-emerald-200">
-                {isSending ? 'Transmitting...' : 'Send Message'}
-              </button>
+              <div className="pt-4">
+                <button type="submit" disabled={isSending} className="w-full py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all disabled:opacity-50 shadow-lg shadow-emerald-200 hover:shadow-emerald-300 transform hover:-translate-y-0.5">
+                  {isSending ? 'Transmitting...' : 'Send Message'}
+                </button>
+              </div>
 
               {status.type && (
-                <div className={`mt-4 p-4 text-sm border-l-2 ${status.type === 'success' ? 'border-emerald-500 text-emerald-700 bg-emerald-50' : 'border-red-500 text-red-700 bg-red-50'}`}>
+                <div className={`p-4 rounded-xl text-center text-sm ${status.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
                   {status.message}
                 </div>
               )}
