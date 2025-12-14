@@ -62,9 +62,9 @@ const About = () => {
                 <div className="h-10 w-px bg-slate-300"></div>
 
                 <div>
-                  <div className="text-3xl font-semibold text-amber-800">
-                    Global
-                  </div>
+                    <div className="text-3xl font-semibold text-amber-800">
+                      {t('about.metrics.global')}
+                    </div>
                   <div className="text-xs uppercase tracking-widest text-slate-400">
                     {t('about.metrics.reach')}
                   </div>

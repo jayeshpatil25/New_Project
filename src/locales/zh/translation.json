@@ -74,7 +74,8 @@
     "follow": "从采购到出口的每一步都以可持续性、一致性和持久的质量承诺为指导。",
     "metrics": {
       "materials": "天然材料",
-      "reach": "值得信赖的覆盖"
+      "reach": "值得信赖的覆盖",
+      "global": "全球"
     }
     ,
     "image_alt": "Zencoir 椰壳产品图片 {{index}}"
