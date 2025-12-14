@@ -31,7 +31,6 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center space-x-3">
-
             <img
               src={logo}
               alt="Zencoir Logo"
@@ -39,7 +38,9 @@ const Header = () => {
             />
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold text-slate-900 tracking-wide">ZENCOIR</h2>
-              <span className="text-[12px] uppercase tracking-[0.2em] text-emerald-600">Global Exports</span>
+              <span className="text-[12px] uppercase tracking-[0.2em] text-amber-800">
+                Global Exports
+              </span>
             </div>
           </div>
 
@@ -48,7 +49,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-md font-medium text-slate-600 hover:text-emerald-700 hover:underline decoration-emerald-500 decoration-2 underline-offset-8 transition-all capitalize"
+                className="text-md font-medium text-slate-600 hover:text-amber-800 hover:underline decoration-amber-700 decoration-2 underline-offset-8 transition-all capitalize"
               >
                 {item}
               </button>
@@ -68,7 +69,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-left px-4 py-3 text-slate-600 hover:text-emerald-600 hover:bg-slate-50 hover:pl-6 transition-all border-l-2 border-transparent hover:border-emerald-500 capitalize font-medium"
+                className="block w-full text-left px-4 py-3 text-slate-600 hover:text-amber-800 hover:bg-slate-50 hover:pl-6 transition-all border-l-2 border-transparent hover:border-amber-700 capitalize font-medium"
               >
                 {item}
               </button>

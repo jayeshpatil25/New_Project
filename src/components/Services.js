@@ -2,7 +2,6 @@ import React from 'react';
 import { GiPlantRoots } from 'react-icons/gi';
 import bg from '../assets/bg.jpg'; // use your image path
 
-
 // --- Services Component ---
 const Services = () => {
   const services = [
@@ -15,7 +14,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-slate-100 overflow-x-hidden">
+    <section id="services" className="py-20 bg-amber-100 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Centered Heading */}
@@ -33,15 +32,15 @@ const Services = () => {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group py-8 border-b border-slate-200 hover:border-emerald-500/50 transition-colors"
+              className="py-8 border-b border-slate-200"
             >
               <div className="flex items-start justify-between mb-3">
-                <h3 className="text-2xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">
+                <h3 className="text-2xl font-bold text-slate-800">
                   {service.title}
                 </h3>
-<GiPlantRoots className="text-emerald-500  transition-colors text-3xl" />
+                <GiPlantRoots className="text-amber-700 text-3xl" />
               </div>
-              <p className="text-lg text-slate-500 group-hover:text-slate-600 transition-colors">
+              <p className="text-lg text-slate-500">
                 {service.details}
               </p>
             </div>

@@ -21,7 +21,7 @@ const About = () => {
   }, [images.length]);
 
   return (
-    <section id="about" className="py-24 bg-slate-100">
+    <section id="about" className="py-24 bg-amber-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[45%_55%] gap-16 items-center">
 
@@ -33,7 +33,7 @@ const About = () => {
                 Mindfully Delivered.
               </h2>
 
-              <div className="h-1 w-14 bg-emerald-500 rounded-full"></div>
+              <div className="h-1 w-14 bg-amber-700 rounded-full"></div>
             </div>
 
             <p className="text-xl text-slate-600 leading-relaxed max-w-xl">
@@ -49,7 +49,7 @@ const About = () => {
 
             <div className="flex items-center gap-8 pt-6">
               <div>
-                <div className="text-3xl font-semibold text-emerald-600">100%</div>
+                <div className="text-3xl font-semibold text-amber-800">100%</div>
                 <div className="text-xs uppercase tracking-widest text-slate-400">
                   Natural Materials
                 </div>
@@ -58,14 +58,13 @@ const About = () => {
               <div className="h-10 w-px bg-slate-300"></div>
 
               <div>
-                <div className="text-3xl font-semibold text-emerald-600">Global</div>
+                <div className="text-3xl font-semibold text-amber-800">Global</div>
                 <div className="text-xs uppercase tracking-widest text-slate-400">
                   Trusted Reach
                 </div>
               </div>
             </div>
           </div>
-
 
           {/* RIGHT — CAROUSEL */}
           <div className="relative w-full h-[420px] rounded-2xl overflow-hidden shadow-lg lg:ml-10">
@@ -74,8 +73,9 @@ const About = () => {
                 key={img}
                 src={img}
                 alt="Zencoir coir products"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${images[current] === img ? "opacity-100" : "opacity-0"
-                  }`}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  images[current] === img ? "opacity-100" : "opacity-0"
+                }`}
               />
             ))}
 
