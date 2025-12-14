@@ -57,7 +57,9 @@ const Products = () => {
                     <span className="text-5xl font-bold text-slate-200 select-none group-hover:text-emerald-100 transition-colors">
                       {product.id}
                     </span>
-                    <h3 className="text-4xl font-bold text-slate-900">{product.name}</h3>
+                    <h3 className="text-3xl sm:text-4xl font-bold text-slate-900">
+                      {product.name}
+                    </h3>
                   </div>
 
                   <p className="text-2xl text-slate-600 leading-relaxed border-l-2 border-emerald-500 pl-4">
@@ -75,7 +77,7 @@ const Products = () => {
                 </div>
 
                 <div className={`flex justify-center ${idx % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <div className="relative w-full max-w-full md:max-w-md aspect-square">
+<div className="relative w-full max-w-full md:max-w-md aspect-square overflow-hidden">
 
                     <div className="absolute inset-0 bg-emerald-500 blur-[60px] opacity-10 group-hover:opacity-20 transition-opacity"></div>
 

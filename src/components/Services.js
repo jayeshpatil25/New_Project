@@ -39,7 +39,7 @@ const Services = () => {
                 <h3 className="text-2xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">
                   {service.title}
                 </h3>
-<GiPlantRoots className="text-slate-400 group-hover:text-emerald-500 transition-colors text-3xl" />
+<GiPlantRoots className="text-emerald-500  transition-colors text-3xl" />
               </div>
               <p className="text-lg text-slate-500 group-hover:text-slate-600 transition-colors">
                 {service.details}
