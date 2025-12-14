@@ -21,18 +21,74 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSending) return;
-    setIsSending(true);
-    setStatus({ type: null, message: '' });
 
-    setTimeout(() => {
+    setIsSending(true);
+    setStatus({ type: null, message: "" });
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    const toEmail =
+      process.env.REACT_APP_EMAILJS_TO_EMAIL || "info@zencoir.in";
+
+    if (!serviceId || !templateId || !publicKey) {
       setStatus({
-        type: 'success',
-        message: "Thank you! Your message has been sent. We'll get back to you soon."
+        type: "error",
+        message: "Email service is not configured. Please try again later.",
       });
-      setFormData({ name: '', email: '', company: '', phone: '', product: '', message: '' });
       setIsSending(false);
-    }, 1500);
+      return;
+    }
+
+    const subject = `New Quote Received - ${formData.name || "Unknown"} - ${formData.email || "no-email"
+      } - ${formData.company || "no-company"} - ${formData.phone || "no-phone"
+      } - ${formData.product || "no-product"}`;
+
+    const templateParams = {
+      subject,
+      to_email: toEmail,
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      product: formData.product,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      setStatus({
+        type: "success",
+        message:
+          "Thank you! Your message has been sent. We'll get back to you soon.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        product: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Email send failed:", error);
+      setStatus({
+        type: "error",
+        message:
+          "Sorry, something went wrong while sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
+
 
   const inputStyles =
     "w-full bg-transparent border-b border-slate-300 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-700 transition-colors rounded-none";
@@ -178,8 +234,8 @@ const Contact = () => {
               {status.type && (
                 <div
                   className={`p-4 rounded-xl text-center text-sm ${status.type === 'success'
-                      ? 'bg-amber-50 text-amber-800 border border-amber-100'
-                      : 'bg-red-50 text-red-700 border border-red-100'
+                    ? 'bg-amber-50 text-amber-800 border border-amber-100'
+                    : 'bg-red-50 text-red-700 border border-red-100'
                     }`}
                 >
                   {status.message}
