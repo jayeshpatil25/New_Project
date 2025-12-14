@@ -1,17 +1,12 @@
 import React from 'react';
 import { GiPlantRoots } from 'react-icons/gi';
+import { useTranslation } from 'react-i18next';
 import bg from '../assets/bg.jpg'; 
 
 // --- Services Component ---
 const Services = () => {
-  const services = [
-    { title: 'Global Export Solutions', details: 'International Shipping, Customs Clearance' },
-    { title: 'Quality Assurance', details: 'Quality Testing, Certification Support' },
-    { title: 'Custom Packaging', details: 'Custom Design, Branding Options' },
-    { title: 'Fast & Reliable Delivery', details: 'Real-time Tracking, Delivery Guarantee' },
-    { title: 'Business Partnership', details: 'Dedicated Support, Flexible Terms' },
-    { title: '24/7 Customer Support', details: 'Multi-language Support, Expert Guidance' }
-  ];
+  const { t } = useTranslation();
+  const services = t('services.list', { returnObjects: true });
 
   return (
     <section 
@@ -27,10 +22,10 @@ const Services = () => {
         <div className="text-center max-w-2xl mx-auto mb-12 relative z-10">
           <div className="absolute inset-0 bg-white/40 blur-3xl -z-10 rounded-full"></div>
           <h2 className="text-5xl font-bold text-slate-900 mb-4">
-            Our Services
+            {t('services.heading')}
           </h2>
           <p className="text-xl text-slate-600 leading-relaxed">
-            Comprehensive export solutions designed to make your international trade seamless, efficient, and profitable.
+            {t('services.sub')}
           </p>
         </div>
 

@@ -1,0 +1,120 @@
+{
+  "header": {
+    "brand": "ZENCOIR",
+    "tagline": "全球出口",
+    "nav": {
+      "home": "主页",
+      "about": "关于",
+      "products": "产品",
+      "services": "服务",
+      "contact": "联系"
+    }
+  },
+  "contact": {
+    "title": "让我们联系",
+    "subtitle": "准备好开始您的椰壳历程了吗？请填写下面的表格，我们会回复您并提供个性化报价。",
+    "labels": {
+      "name": "全名",
+      "email": "电子邮件地址",
+      "company": "公司",
+      "phone": "电话",
+      "product": "感兴趣的产品",
+      "message": "留言"
+    },
+    "placeholders": {
+      "name": "张三",
+      "email": "zhang@company.com",
+      "company": "公司名称",
+      "phone": "+86 138 0000 0000",
+      "select": "选择产品",
+      "coir-pith": "椰糠",
+      "vermicompost": "蚯蚓堆肥",
+      "custom": "定制产品",
+      "message": "告诉我们您的需求..."
+    },
+    "buttons": {
+      "send": "发送消息",
+      "sending": "发送中..."
+    },
+    "status": {
+      "success": "谢谢！您的消息已发送。我们会尽快与您联系。",
+      "error_config": "电子邮件服务未配置。请稍后再试。",
+      "error_send": "抱歉，发送消息时出错。请稍后再试。"
+    }
+  }
+  ,
+  "hero": {
+    "badge": "可持续出口解决方案",
+    "title_line1": "精炼自然的",
+    "title_line2": "优质纤维。",
+    "description": "Zencoir 将全球行业与优质、合乎道德来源的椰壳产品连接起来。我们弥合可持续农业与工业创新之间的差距。",
+    "buttons": {
+      "view": "查看目录",
+      "quote": "请求报价"
+    },
+    "stats": {
+      "markets": "全球市场",
+      "sourcing": "有机采购",
+      "support": "物流支持"
+    }
+  },
+  "about": {
+    "title_line1": "天然制作。",
+    "title_line2": "用心交付。",
+    "lead": "在 Zencoir，我们相信与自然温和共处。我们的椰壳产品由可再生资源精心制作，体现平衡、责任和关怀。",
+    "follow": "从采购到出口的每一步都以可持续性、一致性和持久的质量承诺为指导。",
+    "metrics": {
+      "materials": "天然材料",
+      "reach": "值得信赖的覆盖"
+    }
+  },
+  "products": {
+    "heading": "我们的产品",
+    "sub": "按国际标准加工。",
+    "request_button": "请求定制订单",
+    "items": {
+      "coir-pith": {
+        "name": "椰糠",
+        "description": "用于园艺、种植和农业应用的优质椰糠/泥炭。",
+        "features": ["优异的保水性", "天然pH平衡", "抗病性", "可持续"]
+      },
+      "vermicompost": {
+        "name": "蚯蚓堆肥",
+        "description": "富含营养的有机蚯蚓堆肥，适用于土壤改良和植物生长。",
+        "features": ["改善土壤结构", "促进植物生长", "100% 有机", "可持续"]
+      }
+    }
+  },
+  "services": {
+    "heading": "我们的服务",
+    "sub": "全面的出口解决方案，旨在使您的国际贸易无缝、高效且有利可图。",
+    "list": [
+      { "title": "全球出口解决方案", "details": "国际运输，海关清关" },
+      { "title": "质量保证", "details": "质量检测，认证支持" },
+      { "title": "定制包装", "details": "定制设计，品牌选项" },
+      { "title": "快速可靠的交付", "details": "实时跟踪，交付保证" },
+      { "title": "业务合作", "details": "专属支持，灵活条款" },
+      { "title": "全天候客户支持", "details": "多语言支持，专家指导" }
+    ]
+  },
+  "footer": {
+    "brand": "ZENCOIR",
+    "tagline": "出口卓越",
+    "description": "在全球范围内提供优质的椰壳和蚯蚓堆肥解决方案。可持续产品，创造更绿色的未来。",
+    "quick_links": {
+      "heading": "快速链接",
+      "items": { "home": "主页", "about": "关于", "products": "产品", "services": "服务", "contact": "联系" }
+    },
+    "contact_us": {
+      "heading": "联系我们",
+      "address": "Yashashree Society, Marutrao Gaikwadnagar, Aundh Pune, Maharashtra 411067, India",
+      "phone": "+91 86258 56608",
+      "email": "info@zencoir.in",
+      "hours": "周一 - 周五: 9:00 - 18:00\n周六: 9:00 - 14:00"
+    },
+    "bottom": {
+      "copyright": "© 2025 Zencoir。保留所有权利。",
+      "note": "优质椰壳出口商 • 印度浦那"
+    }
+  }
+}

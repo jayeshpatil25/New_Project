@@ -1,0 +1,120 @@
+{
+  "header": {
+    "brand": "ZENCOIR",
+    "tagline": "Wereldwijde Export",
+    "nav": {
+      "home": "Home",
+      "about": "Over",
+      "products": "Producten",
+      "services": "Diensten",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Laten we contact opnemen",
+    "subtitle": "Klaar om te beginnen met uw kokosvezel-reis? Vul het onderstaande formulier in en we nemen contact op met een gepersonaliseerde offerte.",
+    "labels": {
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "company": "Bedrijf",
+      "phone": "Telefoon",
+      "product": "Productinteresse",
+      "message": "Bericht"
+    },
+    "placeholders": {
+      "name": "Jan Jansen",
+      "email": "jan@bedrijf.com",
+      "company": "Bedrijfsnaam",
+      "phone": "+31 6 12345678",
+      "select": "Selecteer een product",
+      "coir-pith": "Coir Pith",
+      "vermicompost": "Vermicompost",
+      "custom": "Aangepaste producten",
+      "message": "Vertel ons over uw wensen..."
+    },
+    "buttons": {
+      "send": "Bericht verzenden",
+      "sending": "Verzenden..."
+    },
+    "status": {
+      "success": "Dank! Uw bericht is verzonden. We nemen snel contact op.",
+      "error_config": "E-mailservice is niet geconfigureerd. Probeer het later opnieuw.",
+      "error_send": "Sorry, er is iets misgegaan bij het verzenden van uw bericht. Probeer het later opnieuw."
+    }
+  }
+  ,
+  "hero": {
+    "badge": "Duurzame exportoplossingen",
+    "title_line1": "Natuurs verfijnen",
+    "title_line2": "Fijnste vezel.",
+    "description": "Zencoir verbindt wereldwijde industrieën met eersteklas, ethisch verkregen kokosvezelproducten. We overbruggen de kloof tussen duurzame landbouw en industriële innovatie.",
+    "buttons": {
+      "view": "Bekijk catalogus",
+      "quote": "Offerte aanvragen"
+    },
+    "stats": {
+      "markets": "Wereldwijde markten",
+      "sourcing": "Biologische inkoop",
+      "support": "Logistieke ondersteuning"
+    }
+  },
+  "about": {
+    "title_line1": "Natuurlijk vervaardigd.",
+    "title_line2": "Met zorg geleverd.",
+    "lead": "Bij Zencoir geloven we in zacht samenwerken met de natuur. Onze kokosvezelproducten zijn zorgvuldig vervaardigd uit hernieuwbare bronnen en weerspiegelen balans, verantwoordelijkheid en zorg.",
+    "follow": "Elke stap — van inkoop tot export — wordt geleid door duurzaamheid, consistentie en een stille toewijding aan kwaliteit die blijft bestaan.",
+    "metrics": {
+      "materials": "Natuurlijke materialen",
+      "reach": "Vertrouwde bereik"
+    }
+  },
+  "products": {
+    "heading": "Onze producten",
+    "sub": "Verwerkt om te voldoen aan internationale normen.",
+    "request_button": "Aangepaste bestelling aanvragen",
+    "items": {
+      "coir-pith": {
+        "name": "Coir Pith",
+        "description": "Premium coir pith/veen voor tuinbouw, tuinieren en landbouwtoepassingen.",
+        "features": ["Uitstekend waterbehoud", "Natuurlijke pH-balans", "Ziektebestendig", "Duurzaam"]
+      },
+      "vermicompost": {
+        "name": "Vermicompost",
+        "description": "Voedingsrijke organische vermicompost ideaal voor bodemverbetering en plantengroei.",
+        "features": ["Verbetert bodemstructuur", "Bevordert plantengroei", "100% biologisch", "Duurzaam"]
+      }
+    }
+  },
+  "services": {
+    "heading": "Onze diensten",
+    "sub": "Uitgebreide exportoplossingen ontworpen om uw internationale handel naadloos, efficiënt en winstgevend te maken.",
+    "list": [
+      { "title": "Wereldwijde exportoplossingen", "details": "Internationaal transport, douaneafhandeling" },
+      { "title": "Kwaliteitsborging", "details": "Kwaliteitstests, certificeringsondersteuning" },
+      { "title": "Aangepaste verpakking", "details": "Op maat gemaakt ontwerp, brandingopties" },
+      { "title": "Snel en betrouwbaar leveren", "details": "Realtime tracking, leveringsgarantie" },
+      { "title": "Zakelijk partnerschap", "details": "Toegewijde ondersteuning, flexibele voorwaarden" },
+      { "title": "24/7 klantenservice", "details": "Meertalige ondersteuning, deskundige begeleiding" }
+    ]
+  },
+  "footer": {
+    "brand": "ZENCOIR",
+    "tagline": "Export Excellence",
+    "description": "Het leveren van hoogwaardige coir- en vermicompostoplossingen wereldwijd. Duurzame producten voor een groenere toekomst.",
+    "quick_links": {
+      "heading": "Snelle links",
+      "items": { "home": "Home", "about": "Over", "products": "Producten", "services": "Diensten", "contact": "Contact" }
+    },
+    "contact_us": {
+      "heading": "Contacteer ons",
+      "address": "Yashashree Society, Marutrao Gaikwadnagar, Aundh Pune, Maharashtra 411067, India",
+      "phone": "+91 86258 56608",
+      "email": "info@zencoir.in",
+      "hours": "Ma - Vr: 9:00 - 18:00\nZa: 9:00 - 14:00"
+    },
+    "bottom": {
+      "copyright": "© 2025 Zencoir. Alle rechten voorbehouden.",
+      "note": "Premium Coir Exporters • Pune, India"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope, 
   FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling, 
@@ -8,6 +9,7 @@ import {
 
 // --- Hero Component ---
 const Hero = () => {
+  const { t } = useTranslation();
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -27,27 +29,27 @@ const Hero = () => {
             <div className="inline-flex items-center space-x-3 border-b border-amber-700/30 pb-2">
               <span className="w-2 h-2 bg-amber-700 rounded-full animate-pulse"></span>
               <span className="text-amber-800 text-md font-mono tracking-widest uppercase">
-                Sustainable Export Solutions
+                {t('hero.badge')}
               </span>
             </div>
             
             <h1 className="text-5xl sm:text-7xl font-bold text-slate-900 leading-tight tracking-tight">
-              Refining Nature's <br />
+              {t('hero.title_line1')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-800 to-yellow-700">
-                Finest Fiber.
+                {t('hero.title_line2')}
               </span>
             </h1>
             
             <p className="text-xl text-slate-600 max-w-2xl leading-relaxed border-l-4 border-slate-200 pl-6">
-              Zencoir connects global industries with premium, ethically sourced coir products. We bridge the gap between sustainable farming and industrial innovation.
+              {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <button
+                <button
                 onClick={() => scrollToSection('products')}
                 className="group flex items-center justify-between px-8 py-4 bg-amber-800 text-white min-w-[200px] hover:bg-amber-900 transition-colors shadow-lg shadow-amber-200"
               >
-                <span className="font-medium tracking-wide">View Catalog</span>
+                <span className="font-medium tracking-wide">{t('hero.buttons.view')}</span>
                 <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -55,7 +57,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('contact')}
                 className="group flex items-center justify-between px-8 py-4 bg-white border border-slate-300 text-slate-700 min-w-[200px] hover:border-amber-700 hover:text-amber-800 transition-colors"
               >
-                <span className="font-medium tracking-wide">Request Quote</span>
+                <span className="font-medium tracking-wide">{t('hero.buttons.quote')}</span>
                 <div className="w-2 h-2 bg-slate-300 rounded-full group-hover:bg-amber-700 transition-colors"></div>
               </button>
             </div>
@@ -64,17 +66,17 @@ const Hero = () => {
           <div className="lg:col-span-4 flex flex-col justify-end space-y-8 lg:border-l lg:border-slate-200 lg:pl-12 lg:py-12">
             <div className="space-y-2">
               <h3 className="text-5xl font-bold text-slate-900">50+</h3>
-              <p className="text-md text-slate-500 uppercase tracking-widest">Global Markets</p>
+              <p className="text-md text-slate-500 uppercase tracking-widest">{t('hero.stats.markets')}</p>
             </div>
             <div className="w-12 h-px bg-slate-200"></div>
             <div className="space-y-2">
               <h3 className="text-5xl font-bold text-slate-900">100%</h3>
-              <p className="text-md text-slate-500 uppercase tracking-widest">Organic Sourcing</p>
+              <p className="text-md text-slate-500 uppercase tracking-widest">{t('hero.stats.sourcing')}</p>
             </div>
             <div className="w-12 h-px bg-slate-200"></div>
             <div className="space-y-2">
               <h3 className="text-5xl font-bold text-slate-900">24/7</h3>
-              <p className="text-md text-slate-500 uppercase tracking-widest">Logistics Support</p>
+              <p className="text-md text-slate-500 uppercase tracking-widest">{t('hero.stats.support')}</p>
             </div>
           </div>
         </div>

@@ -1,0 +1,120 @@
+{
+  "header": {
+    "brand": "ZENCOIR",
+    "tagline": "Global Exports",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "products": "Products",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Ready to start your coir benefit journey? Fill out the form below and we will get back to you with a personalized quote.",
+    "labels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "phone": "Phone",
+      "product": "Product Interest",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@company.com",
+      "company": "Company Name",
+      "phone": "+1 (555) 000-0000",
+      "select": "Select a product",
+      "coir-pith": "Coir Pith",
+      "vermicompost": "Vermicompost",
+      "custom": "Custom Products",
+      "message": "Tell us about your requirements..."
+    },
+    "buttons": {
+      "send": "Send Message",
+      "sending": "Transmitting..."
+    },
+    "status": {
+      "success": "Thank you! Your message has been sent. We'll get back to you soon.",
+      "error_config": "Email service is not configured. Please try again later.",
+      "error_send": "Sorry, something went wrong while sending your message. Please try again later."
+    }
+  }
+  ,
+  "hero": {
+    "badge": "Sustainable Export Solutions",
+    "title_line1": "Refining Nature's",
+    "title_line2": "Finest Fiber.",
+    "description": "Zencoir connects global industries with premium, ethically sourced coir products. We bridge the gap between sustainable farming and industrial innovation.",
+    "buttons": {
+      "view": "View Catalog",
+      "quote": "Request Quote"
+    },
+    "stats": {
+      "markets": "Global Markets",
+      "sourcing": "Organic Sourcing",
+      "support": "Logistics Support"
+    }
+  },
+  "about": {
+    "title_line1": "Naturally Crafted.",
+    "title_line2": "Mindfully Delivered.",
+    "lead": "At Zencoir, we believe in working gently with nature. Our coir products are thoughtfully crafted from renewable resources, reflecting balance, responsibility, and care.",
+    "follow": "Every step — from sourcing to export — is guided by sustainability, consistency, and a quiet commitment to quality that lasts.",
+    "metrics": {
+      "materials": "Natural Materials",
+      "reach": "Trusted Reach"
+    }
+  },
+  "products": {
+    "heading": "Our Products",
+    "sub": "Processed to meet international standards.",
+    "request_button": "Request Custom Order",
+    "items": {
+      "coir-pith": {
+        "name": "Coir Pith",
+        "description": "Premium coir pith/peat for horticulture, gardening, and agricultural applications.",
+        "features": ["Excellent Water Retention", "Natural pH Balance", "Disease Resistant", "Sustainable"]
+      },
+      "vermicompost": {
+        "name": "Vermicompost",
+        "description": "Nutrient-rich organic vermicompost ideal for soil conditioning and plant growth.",
+        "features": ["Improves Soil Structure", "Boosts Plant Growth", "100% Organic", "Sustainable"]
+      }
+    }
+  },
+  "services": {
+    "heading": "Our Services",
+    "sub": "Comprehensive export solutions designed to make your international trade seamless, efficient, and profitable.",
+    "list": [
+      { "title": "Global Export Solutions", "details": "International Shipping, Customs Clearance" },
+      { "title": "Quality Assurance", "details": "Quality Testing, Certification Support" },
+      { "title": "Custom Packaging", "details": "Custom Design, Branding Options" },
+      { "title": "Fast & Reliable Delivery", "details": "Real-time Tracking, Delivery Guarantee" },
+      { "title": "Business Partnership", "details": "Dedicated Support, Flexible Terms" },
+      { "title": "24/7 Customer Support", "details": "Multi-language Support, Expert Guidance" }
+    ]
+  },
+  "footer": {
+    "brand": "ZENCOIR",
+    "tagline": "Export Excellence",
+    "description": "Delivering premium quality coir and vermicompost solutions globally. Sustainable products for a greener future.",
+    "quick_links": {
+      "heading": "Quick Links",
+      "items": { "home": "Home", "about": "About", "products": "Products", "services": "Services", "contact": "Contact" }
+    },
+    "contact_us": {
+      "heading": "Contact Us",
+      "address": "Yashashree Society, Marutrao Gaikwadnagar, Aundh Pune, Maharashtra 411067, India",
+      "phone": "+91 86258 56608",
+      "email": "info@zencoir.in",
+      "hours": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM"
+    },
+    "bottom": {
+      "copyright": "© 2025 Zencoir. All rights reserved.",
+      "note": "Premium Coir Exporters • Pune, India"
+    }
+  }
+}

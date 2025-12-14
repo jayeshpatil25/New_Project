@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope,
   FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling,
@@ -8,6 +9,7 @@ import {
 
 // --- Contact Component ---
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '', email: '', company: '', phone: '', product: '', message: ''
   });
@@ -34,7 +36,7 @@ const Contact = () => {
     if (!serviceId || !templateId || !publicKey) {
       setStatus({
         type: "error",
-        message: "Email service is not configured. Please try again later.",
+        message: t('contact.status.error_config'),
       });
       setIsSending(false);
       return;
@@ -65,8 +67,7 @@ const Contact = () => {
 
       setStatus({
         type: "success",
-        message:
-          "Thank you! Your message has been sent. We'll get back to you soon.",
+        message: t('contact.status.success'),
       });
 
       setFormData({
@@ -81,8 +82,7 @@ const Contact = () => {
       console.error("Email send failed:", error);
       setStatus({
         type: "error",
-        message:
-          "Sorry, something went wrong while sending your message. Please try again later.",
+        message: t('contact.status.error_send'),
       });
     } finally {
       setIsSending(false);
@@ -103,10 +103,10 @@ const Contact = () => {
         {/* Centered Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-            Let's Connect
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">
-            Ready to start your coir benefit journey? Fill out the form below and we will get back to you with a personalized quote.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -118,7 +118,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                    Full Name
+                    {t('contact.labels.name')}
                   </label>
                   <input
                     type="text"
@@ -127,13 +127,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className={inputStyles}
-                    placeholder="John Doe"
+                    placeholder={t('contact.placeholders.name')}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                    Email Address
+                    {t('contact.labels.email')}
                   </label>
                   <input
                     type="email"
@@ -142,7 +142,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className={inputStyles}
-                    placeholder="john@company.com"
+                    placeholder={t('contact.placeholders.email')}
                   />
                 </div>
               </div>
@@ -150,7 +150,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                    Company
+                    {t('contact.labels.company')}
                   </label>
                   <input
                     type="text"
@@ -158,13 +158,13 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleChange}
                     className={inputStyles}
-                    placeholder="Company Name"
+                    placeholder={t('contact.placeholders.company')}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                    Phone
+                    {t('contact.labels.phone')}
                   </label>
                   <input
                     type="tel"
@@ -172,14 +172,14 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className={inputStyles}
-                    placeholder="+1 (555) 000-0000"
+                    placeholder={t('contact.placeholders.phone')}
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                  Product Interest
+                  {t('contact.labels.product')}
                 </label>
                 <div className="relative">
                   <select
@@ -188,10 +188,10 @@ const Contact = () => {
                     onChange={handleChange}
                     className={`${inputStyles} appearance-none cursor-pointer`}
                   >
-                    <option value="" className="text-slate-400">Select a product</option>
-                    <option value="coir-pith" className="text-slate-900">Coir Pith</option>
-                    <option value="vermicompost" className="text-slate-900">Vermicompost</option>
-                    <option value="custom" className="text-slate-900">Custom Products</option>
+                    <option value="" className="text-slate-400">{t('contact.placeholders.select')}</option>
+                    <option value="coir-pith" className="text-slate-900">{t('contact.placeholders.coir-pith')}</option>
+                    <option value="vermicompost" className="text-slate-900">{t('contact.placeholders.vermicompost')}</option>
+                    <option value="custom" className="text-slate-900">{t('contact.placeholders.custom')}</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
                     <svg
@@ -207,7 +207,7 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-md font-bold uppercase tracking-wider text-slate-500 ml-1">
-                  Message
+                  {t('contact.labels.message')}
                 </label>
                 <textarea
                   name="message"
@@ -216,7 +216,7 @@ const Contact = () => {
                   required
                   rows="4"
                   className={`${inputStyles} resize-none`}
-                  placeholder="Tell us about your requirements..."
+                  placeholder={t('contact.placeholders.message')}
                 ></textarea>
               </div>
 
@@ -226,7 +226,7 @@ const Contact = () => {
                   disabled={isSending}
                   className="w-full py-5 bg-amber-800 hover:bg-amber-900 text-white font-bold tracking-widest uppercase text-sm rounded-xl disabled:opacity-50 shadow-lg shadow-amber-200 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-amber-300"
                 >
-                  {isSending ? 'Transmitting...' : 'Send Message'}
+                  {isSending ? t('contact.buttons.sending') : t('contact.buttons.send')}
                 </button>
 
               </div>

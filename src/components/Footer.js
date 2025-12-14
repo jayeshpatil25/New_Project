@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   FaAward, FaGlobe, FaHandshake, FaLeaf, FaPhone, FaEnvelope,
   FaMapMarkerAlt, FaBars, FaTimes, FaShippingFast, FaSeedling,
@@ -7,6 +8,7 @@ import {
 } from 'react-icons/fa';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -20,32 +22,32 @@ const Footer = () => {
           {/* Column 1: Brand Info */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-1">ZENCOIR</h3>
+              <h3 className="text-3xl font-bold text-white mb-1">{t('footer.brand')}</h3>
               <p className="text-xs text-amber-700 uppercase tracking-[0.3em]">
-                Export Excellence
+                {t('footer.tagline')}
               </p>
             </div>
             <p className="text-base leading-relaxed text-slate-500 max-w-xs">
-              Delivering premium quality coir and vermicompost solutions globally. Sustainable products for a greener future.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-base">
-              Quick Links
+              {t('footer.quick_links.heading')}
             </h4>
             <div className="grid grid-cols-2 gap-3">
-              {['home', 'about', 'products', 'services', 'contact'].map((item) => (
+              {Object.entries(t('footer.quick_links.items', { returnObjects: true })).map(([key, label]) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
+                  key={key}
+                  onClick={() => scrollToSection(key)}
                   className="text-base text-left capitalize flex items-center text-slate-400 hover:text-white transition-all duration-300"
                 >
                   <span className="w-2 mr-1 text-amber-700 transform transition-transform duration-300 group-hover:translate-x-1">
                     ›
                   </span>
-                  {item}
+                  {label}
                 </button>
 
               ))}
@@ -55,36 +57,34 @@ const Footer = () => {
           {/* Column 3: Contact Details */}
           <div>
             <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-base">
-              Contact Us
+              {t('footer.contact_us.heading')}
             </h4>
             <ul className="space-y-4 text-base">
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="text-amber-700 mt-1 flex-shrink-0" />
                 <span>
-                  Yashashree Society, Marutrao Gaikwadnagar,<br />
-                  Aundh Pune, Maharashtra 411067, India
+                  {t('footer.contact_us.address')}
                 </span>
               </li>
 
               <li className="flex items-center space-x-3">
                 <FaPhone className="text-amber-700 flex-shrink-0" />
                 <span>
-                  +91 86258 56608
+                  {t('footer.contact_us.phone')}
                 </span>
               </li>
 
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="text-amber-700 flex-shrink-0" />
                 <span>
-                  info@zencoir.in
+                  {t('footer.contact_us.email')}
                 </span>
               </li>
 
               <li className="flex items-start space-x-3">
                 <FaClock className="text-amber-700 mt-1 flex-shrink-0" />
                 <span>
-                  Mon - Fri: 9:00 AM - 6:00 PM<br />
-                  Sat: 9:00 AM - 2:00 PM
+                  {t('footer.contact_us.hours')}
                 </span>
               </li>
             </ul>
