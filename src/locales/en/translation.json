@@ -22,8 +22,8 @@
       "message": "Message"
     },
     "placeholders": {
-      "name": "John Doe",
-      "email": "john@company.com",
+      "name": "Your Name",
+      "email": "name@company.com",
       "company": "Company Name",
       "phone": "+1 (555) 000-0000",
       "select": "Select a product",

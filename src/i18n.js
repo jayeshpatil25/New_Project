@@ -15,6 +15,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    // Use saved language from localStorage if present, otherwise default to English
     lng: localStorage.getItem('i18nextLng') || 'en',
     fallbackLng: 'en',
     interpolation: {

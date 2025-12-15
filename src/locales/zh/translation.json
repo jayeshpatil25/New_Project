@@ -22,8 +22,8 @@
       "message": "留言"
     },
     "placeholders": {
-      "name": "张三",
-      "email": "zhang@company.com",
+      "name": "您的姓名",
+      "email": "name@company.com",
       "company": "公司名称",
       "phone": "+86 138 0000 0000",
       "select": "选择产品",

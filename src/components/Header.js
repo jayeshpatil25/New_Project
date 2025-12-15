@@ -95,6 +95,12 @@ const Header = () => {
               </button>
             ))}
           </nav>
+              <div className="px-4 pb-6 pt-2 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-slate-600">Language</div>
+                  <LanguageSelector />
+                </div>
+              </div>
         </div>
       )}
     </header>

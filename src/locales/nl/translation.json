@@ -22,8 +22,8 @@
       "message": "Bericht"
     },
     "placeholders": {
-      "name": "Jan Jansen",
-      "email": "jan@bedrijf.com",
+      "name": "Uw naam",
+      "email": "name@company.com",
       "company": "Bedrijfsnaam",
       "phone": "+31 6 12345678",
       "select": "Selecteer een product",
