@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zencoir/static/css/main.1f3aa865.css",
-    "main.js": "/zencoir/static/js/main.1482feb2.js",
+    "main.js": "/zencoir/static/js/main.b43deafb.js",
     "static/media/bg.jpg": "/zencoir/static/media/bg.c9e63b91fff60f09688c.jpg",
     "static/media/img3.jpg": "/zencoir/static/media/img3.f1cd11b72c821cebedeb.jpg",
     "static/media/img2.jpg": "/zencoir/static/media/img2.f4ac50e2310eafcdd4c7.jpg",
@@ -14,10 +14,10 @@
     "static/media/img1.jpg": "/zencoir/static/media/img1.cb3a2a2306aed3d9acf6.jpg",
     "index.html": "/zencoir/index.html",
     "main.1f3aa865.css.map": "/zencoir/static/css/main.1f3aa865.css.map",
-    "main.1482feb2.js.map": "/zencoir/static/js/main.1482feb2.js.map"
+    "main.b43deafb.js.map": "/zencoir/static/js/main.b43deafb.js.map"
   },
   "entrypoints": [
     "static/css/main.1f3aa865.css",
-    "static/js/main.1482feb2.js"
+    "static/js/main.b43deafb.js"
   ]
 }
