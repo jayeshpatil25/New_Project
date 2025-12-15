@@ -24,10 +24,14 @@ const About = () => {
 
   return (
     <section
-      id="about"
-      // CHANGED: darker amber diagonal lines to create a visible "woven" texture
-      className="py-24 bg-amber-100 bg-[repeating-linear-gradient(45deg,rgba(217,119,6,0.1)_0px,rgba(217,119,6,0.1)_1px,transparent_1px,transparent_10px),repeating-linear-gradient(-45deg,rgba(217,119,6,0.1)_0px,rgba(217,119,6,0.1)_1px,transparent_1px,transparent_10px)] scroll-mt-24"
-    >
+  id="about"
+  className="pt-32 sm:pt-24 py-24
+             bg-amber-100
+             bg-[repeating-linear-gradient(45deg,rgba(217,119,6,0.1)_0px,rgba(217,119,6,0.1)_1px,transparent_1px,transparent_10px),
+                 repeating-linear-gradient(-45deg,rgba(217,119,6,0.1)_0px,rgba(217,119,6,0.1)_1px,transparent_1px,transparent_10px)]
+             scroll-mt-24"
+>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[45%_55%] gap-16 items-center">
           {/* LEFT — SOOTHING CONTENT */}
