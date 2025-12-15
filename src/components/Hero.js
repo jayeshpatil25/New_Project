@@ -15,8 +15,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen bg-white flex items-center pt-20 scroll-mt-24 overflow-hidden">
-      
+// Added 'pb-24' for mobile and 'lg:pb-0' to keep laptop view centered
+  <section id="home" className="relative min-h-screen bg-white flex items-center pt-20 pb-24 lg:pb-0 scroll-mt-24 overflow-hidden">      
       {/* Subtle Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:18px_18px]"></div>
 
